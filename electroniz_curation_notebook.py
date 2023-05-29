@@ -319,7 +319,7 @@ for table in TABLE_LIST.split(","):
                                                 "updated_at":       "store_orders_new.updated_at"      
                          }                                                            
                        ).execute())
-      deltaTable.delete("order_mode = 'DELETE'")
+      # deltaTable.delete("order_mode = 'DELETE'")
     elif table=="products":
       df_table_incremental = spark.read.csv(bronze_table_path, schema=schema_stores )
       df_table_curated=df_table_incremental.withColumn('updated_at', f.lit(UPDATED))
