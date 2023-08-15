@@ -3,6 +3,10 @@ from pyspark.sql.functions import *
 
 # COMMAND ----------
 
+
+
+# COMMAND ----------
+
 dbutils.fs.mount(
     source=f"wasbs://silver@traininglakehousede.blob.core.windows.net",
     mount_point=f"/mnt/silver",
